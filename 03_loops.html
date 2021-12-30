@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Loops</title>
+</head>
+<body>
+    <h1>Loops in JS</h1>
+    <script>
+
+        /* for( var i = 1; i<11; i++ ){
+            console.log(i);
+        } */
+        var colors = ['red', 'pink', 'blue', 'yellow', 'green', 'orange', 'purple'];
+
+        /* for (var i = 0; i < colors.length; i++){
+            console.log(colors[i]); 
+        }*/
+        /* for (var eachColor of colors) {
+            console.log(eachColor);
+        } */
+        /* var myString = "Happy New Year!"
+
+        for (var i=0; i<myString.length; i++){
+            console.log(myString[i]);
+        }
+        for (var eachLetter of myString){
+            console.log( eachLetter);
+        } */
+        var incrementor = 0;
+        var text = "";
+        var i = 0;
+
+        while( incrementor<10 ){
+            /* text +="The incrementor has gone up to " + incrementor + "\n"; */
+            text += `The incrementor has gone up to ${incrementor} \n`;
+            incrementor++;
+        }
+        while ( i < 10 ){
+            text += `The incrementor is ${i}, and squared it is ${i*i} \n`;
+            i++;
+        }
+        console.log(text);
+        var myUpperString = text.toUpperCase();
+        console.log(myUpperString);
+        
+    </script>
+    
+</body>
+</html>
