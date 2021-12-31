@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions in JavaScript</h1>
+    <script>
+        function doStuff(){
+            var myString = "Here is a string of text";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+        }
+        window.doStuff();
+
+        function checkNum(){
+            var userNum = prompt("Enter a whole number?","");
+
+            if(userNum < 10 ){
+                console.log("you entered a number less than 10");
+                for(var i=0; i < 10; i++) {
+                    console.log(`Here is a ${i}`);
+                }
+            }else if (9 < userNum){
+                console.log("you entered a big number");
+            }else{
+                console.log("ERROR: you didn't enter a number!");
+            }
+        }
+        checkNum();
+
+        function upperMessage(message){
+            var upperMessage = message.toUpperCase();
+            console.log(upperMessage);
+        }
+        //upperMessage('here is message');
+        
+        function addNums(num1, num2){
+            var sum = num1 + num2
+            console.log(sum);
+        }
+        //addNums(99, 329);
+
+        function returnSum(num1, num2){
+            var sum = num1 + num2
+            return sum;
+        }
+        console.log(returnSum(3,5)) 
+        
+        console.log(Math.random());
+
+        var foods = ["cheese", "chicken", "grapes", "hamburgers"];
+
+        function randomInt( min, max ){
+
+            /* var numOfValues = max - min + 1;
+            var randomNum = Math.random();
+            var randomVal = randomNum * numOfValues;
+            var roundedRandomVal = Math.floor(randomVal);
+            var finalNum = min + roundedRandomVal; */
+            return Math.floor( (max - min + 1) * Math.random()) + min;
+        }
+        // randomInt(5, 10);
+        console.log( foods[ randomInt(0, 3) ]);
+
+        var greeting = "Hello, and good morning!";
+
+        function capitalizeFuntion(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+        var capitalizeExpression = function(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+        var capitalizeArrow = anyString => anyString.toUpperCase();
+
+        console.log( capitalizeExpression(greeting));
+        console.log( capitalizeFuntion(greeting));
+        console.log(capitalizeArrow(greeting));
+
+    </script>
+</body>
+</html>
