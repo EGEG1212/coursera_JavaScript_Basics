@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>Doument Object Module Examples</h1>
+    <h2>Removing Elements</h2>
+    <div>
+        <p>Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>Remove this paragraph</p>
+    </div>
+    
+    <script>
+        var myDiv = document.querySelector('div');
+        myDiv.removeChild(myDiv.children[2]);
+    </script>
+</body>
+</html>
