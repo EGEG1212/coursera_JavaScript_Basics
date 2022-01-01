@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>Doument Object Module Examples</h1>
+    <div>
+        <p>Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>Here is one mere paragraph</p>
+    </div>
+    
+    <script>
+        var myTag = document.createElement('p');
+        var mySentence = document.createTextNode('second paragraph');
+        myTag.appendChild(mySentence);
+        document.querySelector('div').appendChild(myTag);
+
+        //👆위에 1줄과 같은 내용 👇 문장추가
+        /* var myDiv = document.querySelector('div');
+        myDiv.appendChild(myTag); */
+
+    </script>
+</body>
+</html>
