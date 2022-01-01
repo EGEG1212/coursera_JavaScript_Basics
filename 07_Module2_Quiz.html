@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Module 2 Quiz.</h1>
+    <script>
+        function selectColor(color){
+            if(color == "red" || color == "blue" ||color == "yellow"){
+                var colorArray = [];
+                for(var i=0; i<color.length; i++){
+                    colorArray.push(color[i]);
+                }
+                return colorArray;
+            }
+            else{
+                return `the ${color} is not a primary color`;
+            }
+        }
+        selectColor(green); //뭐야 도대체 어떻게 불러오는거야
+    </script>
+
+</body>
+</html>
