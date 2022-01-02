@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Roll your Mouse Over The Boxes</h1>
+    <div></div>
+
+    <script>
+        var heading = document.querySelector('h1');
+        var box = document.querySelector('div');
+
+        box.addEventListener('mouseover', function(){
+            heading.innerHTML = "The mouse is over the box!";
+        }); //박스위에 마우스를올리면 헤딩부분이 이렇게 바뀜
+
+        box.addEventListener('mouseout', function(){
+            heading.innerHTML = "The mouse has left the box!";
+        });//박스바깥에 마우스가 있으면 헤딩부분이 이렇게 바뀜
+
+        heading.addEventListener('mouseover', function(){
+            heading.innerHTML = "Roll Your Mouse Over The Box";
+        });//헤딩부분에 마우스가 있으면 헤딩부분이 이렇게
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Key Down Events</h1>
+    <p>Press a Key on the keybord</p>
+
+    <script>
+
+        document.addEventListener('keydown', function(event){
+            //alert(`the ${event.which} key was pressed.`); //MDN참조
+            alert(`the ${event.key} key was pressed.`);
+            //😜
+            //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+            //https://developer.mozilla.org/en-US/docs/Web/Events
+        });
+
+    </script>
+</body>
+</html>
