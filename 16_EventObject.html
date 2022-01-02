@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Javascript Events</h1>
+    <button>Don't Press Me!</button>
+    <a href="http://google.com">Link to Google</a>
+    <script>
+
+        var btn = document.querySelector('button');
+
+        btn.addEventListener( 'click', function(evt){
+            evt.target.style.backgroundColor = "red" ;
+            alert("oh no you didn't!");
+        } );
+        //=========================
+        var link = document.querySelector('a');
+        link.addEventListener('click', function(event){
+            //event.preventDefault(); //👈요기가 없어지니까,구글사이트로 이동됨
+            alert("Sorry, no google for you");
+        });
+
+    </script>
+</body>
+</html>

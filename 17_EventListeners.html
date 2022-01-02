@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Javascript Events</h1>
+    <button>Don't Press Me!</button>
+
+    <script>
+
+        var btn = document.querySelector('button');
+
+        /* function ouch() {
+            alert("oh no you didn't!");
+        }
+        btn.addEventListener( 'click', ouch ); */
+
+        // 위👆3줄의 내용이 아래👇1줄과 같다!
+        btn.addEventListener( 'click', function(){ 
+            alert("oh no you didn't!");
+        } );
+        
+
+    </script>
+</body>
+</html>
