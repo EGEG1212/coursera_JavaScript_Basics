@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Scope</title>
+</head>
+<body>
+    <h1>Scope in JS</h1>
+    <p>Here is a paragraph. Never use global scope</p>
+    <p>Here is a paragraph. Never use global scope</p>
+    <p>Here is a paragraph. Never use global scope</p>
+    <script>
+       /*  //var aVariable = "this is global"
+
+        function testScope(){
+            var oopsGlobal = "This is accidentally global";
+            var aVariable = "this is local";
+            console.log(aVariable);
+        }
+        testScope(); //run the function
+        console.log(oopsGlobals); */
+
+        (function(){}());
+                //👆대괄호에 코드넣기
+        var myPs = document.querySelectorAll('p');
+        for ( var i=0; i<myPs.length; i++){
+            myPs[i].style.color = "red";
+        }
+        //👏MDN에서 IIFE검색 Immediately Invoked Function Expression
+        // https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+    </script>
+</body>
+</html>
