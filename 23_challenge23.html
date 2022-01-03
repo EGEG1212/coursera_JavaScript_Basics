@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges</title>
+</head>
+<body>
+    <h1>JavaScript Event Challenges: Challenge 23</h1>
+    <p>Here is a Paragraph of text</p>
+    <p>Here is a another paragraph of text</p>
+    <p>Here is a third paragraph of text</p>
+    <button>Turn Them All Dammit!</button>
+
+    <script>
+
+        //querySelectorAll 모든P태그를찾아라
+        var pTags = document.querySelectorAll('p');
+        var btn = document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+            for(var i=0; i<pTags.length; i++){
+                pTags[i].style.color = "green";
+
+            }
+        });
+
+    </script>
+</body>
+</html>

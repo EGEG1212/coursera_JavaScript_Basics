@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges</title>
+</head>
+<body>
+    <h1>JavaScript Event Challenges: Challenge 24</h1>
+    <p>Cange the HTML so that there is a div around one paragraph. Make it so that when you click the button a new paragraph is added to the div, with the text, "A new paragraph" in it.</p>
+    <p>You may need to go back to the slides on changing the DOM to see how to do this.</p>
+    <div>
+        <p>Here is the first paragraph of text</p>
+    </div>
+    <button>Add a paragraph</button>
+
+    <script>
+
+        var divTag = document.querySelector('div');
+        var btn = document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+            var newP = document.createElement('p');
+            var pText = document.createTextNode('A new paragraph');
+            newP.appendChild(pText);
+            divTag.appendChild(newP);
+        });
+
+    </script>
+</body>
+</html>
